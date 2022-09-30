@@ -34,10 +34,6 @@ public class UserController {
 	public String second() {
 		return "This is a string";
 	}
-
-	@PostMapping("/")
-	public UserEntity createUser(@RequestBody UserEntity user) throws Exception {
-		return this.userService.createUser(user);
 	}
 	
 	int num = 29;
