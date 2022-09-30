@@ -39,6 +39,22 @@ public class UserController {
 	public UserEntity createUser(@RequestBody UserEntity user) throws Exception {
 		return this.userService.createUser(user);
 	}
+	
+	int num = 29;
+        boolean flag = false;
+        for(int i = 2; i <= num/2; ++i)
+        {
+            if(num % i == 0)
+            {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
 
 	@GetMapping("/{email}")
 	public UserEntity getUser(@PathVariable("email") String email) throws Exception {
